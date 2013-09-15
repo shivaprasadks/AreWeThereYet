@@ -59,7 +59,8 @@ public class DrawerFragment extends Fragment implements View.OnClickListener, Co
         V.findViewById(R.id.row_title_ringtone).setOnClickListener(ringtoneListener);
         V.findViewById(R.id.row_title_donate).setOnClickListener(donateListener);
 
-        donater = new Donate(this.getActivity());
+        try{donater = new Donate(this.getActivity());}
+        catch (NoClassDefFoundError e) {}
 
         return V;
 	}
