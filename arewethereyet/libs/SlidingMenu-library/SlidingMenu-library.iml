@@ -6,11 +6,6 @@
         <option name="LIBRARY_PROJECT" value="true" />
       </configuration>
     </facet>
-    <facet type="android" name="Android2">
-      <configuration>
-        <option name="LIBRARY_PROJECT" value="true" />
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -22,6 +17,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ActionBarSherlock-library" />
     <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="module" module-name="google-play-services_lib" />
   </component>
 </module>
 
