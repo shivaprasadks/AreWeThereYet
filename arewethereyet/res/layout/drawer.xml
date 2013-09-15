@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="50dp">
+    <LinearLayout
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/row_title_ringtone"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/drawer_setringtone"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:drawableLeft="@drawable/ic_action_ringtone"
+                android:drawablePadding="10dp"/>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/underline" />
+
+
+            <TextView
+                    android:id="@+id/row_title_pinned"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/drawer_pinnedalarms"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:drawableLeft="@drawable/ic_action_pinned"
+                    android:drawablePadding="10dp"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/underline" />
+        <LinearLayout
+                android:id="@+id/group_pinned"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top">
+        </LinearLayout>
+
+            <TextView
+                    android:id="@+id/row_title_recent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/drawer_recentalarms"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:drawableLeft="@drawable/ic_action_alarms"
+                    android:drawablePadding="10dp"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/underline" />
+        <LinearLayout
+                android:id="@+id/group_recent"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+    <TextView
+            android:id="@+id/row_title_donate"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/drawer_donate"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:drawableLeft="@drawable/ic_action_donate"
+            android:drawablePadding="10dp"
+            android:background="@color/abs__holo_blue_light"
+            android:layout_gravity="bottom"/>
+</FrameLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+            package="com.geoffreybuttercrumbs.arewethereyet"
+            android:versionCode="13"
+            android:versionName="0.44">
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true"/>
+    <application	android:icon="@drawable/ic_launcher_alt"
+                    android:label="@string/app_name"
+                    android:theme="@style/SliderTheme"
+            >
+        <!-- TODO Put your own maps API key below... See https://developers.google.com/maps/documentation/android/start -->
+        <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="********YOUR KEY GOES HERE********"/>
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity android:name=".ZonePicker"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity	android:name=".Alarm"
+                     android:theme="@style/Theme.CustomDialog"/>
+
+        <service android:name=".AlarmService"/>
+    </application>
+</manifest>

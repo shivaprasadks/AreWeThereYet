@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:id="@+id/map_frame"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        />
+    <!--map:zOrderOnTop="false"-->
+    <ImageButton
+            android:id="@+id/button_mylocation"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="75dp"
+            android:layout_marginRight="5dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:src="@drawable/ic_mylocation"
+            android:contentDescription="@string/accessibility_mylocation"/>
+    <com.geoffreybuttercrumbs.arewethereyet.AlarmOverlay
+            android:id="@+id/alarm_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</FrameLayout>
