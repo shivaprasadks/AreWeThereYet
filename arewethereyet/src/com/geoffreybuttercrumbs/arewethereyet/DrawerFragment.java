@@ -59,8 +59,7 @@ public class DrawerFragment extends Fragment implements View.OnClickListener, Co
         V.findViewById(R.id.row_title_ringtone).setOnClickListener(ringtoneListener);
         V.findViewById(R.id.row_title_donate).setOnClickListener(donateListener);
 
-        try{donater = new Donate(this.getActivity());}
-        catch (NoClassDefFoundError e) {}
+//        donater = new Donate(this.getActivity());
 
         return V;
 	}
@@ -276,8 +275,7 @@ public class DrawerFragment extends Fragment implements View.OnClickListener, Co
         public void onClick(View v)
         {
             V.findViewById(R.id.row_title_donate).setClickable(false);
-            try{((Donate) donater).donate();}
-            catch (ClassCastException e) {Toast.makeText(getActivity(), "You need to implement your own billing!", Toast.LENGTH_LONG).show();}
+//            ((Donate) donater).donate();
         }
     };
 
@@ -383,10 +381,7 @@ public class DrawerFragment extends Fragment implements View.OnClickListener, Co
 
     @Override
     public void onDestroy() {
-        // very important:
-//        Log.d(TAG, "Destroying helper.");
-        try {((Donate) donater).shutdown();}
-        catch (ClassCastException e) {Toast.makeText(getActivity(), "You need to implement your own billing!", Toast.LENGTH_LONG).show();}
+//        ((Donate) donater).shutdown();
         super.onDestroy();
     }
 }
