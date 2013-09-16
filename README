@@ -1,7 +1,7 @@
 A example implementation of a location based alarm. See https://play.google.com/store/apps/details?id=com.geoffreybuttercrumbs.arewethereyet&hl=en for live project.
 
-Files are distributed under Apache License, Version 2.0.
-
 Before this application will work, you will need to add you own Google Maps API key to the manifest file. For details see: https://developers.google.com/maps/documentation/android/start#the_google_maps_api_key
+
+This project is distributed under Apache License, Version 2.0.
 
 This file was modified by IntelliJ IDEA 12.1.4 for binding GitHub repository
